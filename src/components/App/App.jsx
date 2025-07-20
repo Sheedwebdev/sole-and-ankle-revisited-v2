@@ -1,9 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { QUERIES } from '../../constants';
+
+
 
 import Header from '../Header';
 import ShoeIndex from '../ShoeIndex';
+import { QUERIES } from '../../constants';
 
 const App = () => {
   const [sortId, setSortId] = React.useState('newest');
@@ -20,29 +22,15 @@ const App = () => {
 
 const Main = styled.main`
   padding: 64px 32px;
- 
-  @media ${QUERIES.laptopAndSmaller} {
-    background; yellow;
-  }
-  @media ${QUERIES.tabletAndSmaller} {
-    background; red;
-  }
-  @media ${QUERIES.phoneAndSmaller} {
-    background; fuchsia;
-  }
- 
-`;
 
+  @media ${QUERIES.tabletAndSmaller} {
+    padding: 48px 32px
+  }
+
+  @media ${QUERIES.phoneAndSmaller} {
+    padding: 48px 16px
+  }
+`;
 export default App;
 
-/* 
-@media ${QUERIES.laptopAndSmaller} {
-  background; yellow;
-}
-@media ${QUERIES.tabletAndSmaller} {
-  background; red;
-}
-@media ${QUERIES.phoneAndSmaller} {
-  background; fuchsia;
-}
-*/
+
